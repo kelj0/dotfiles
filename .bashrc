@@ -94,7 +94,7 @@ alias l='ls -CF'
 
 #== ALIASES ==#
 alias gaa='git add --all'
-alias gca='git commit -m'
+alias gca='git commit'
 alias gst='git status'
 alias gps='git push'
 
