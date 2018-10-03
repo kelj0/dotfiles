@@ -101,7 +101,6 @@ alias gps='git push'
 alias python='python3'
 alias ptpython='python3 -m ptpython'
 alias mapit='python3 ~/github/LearningPython/Code/CodesFromBooks/Web/mapIt.py' 
-alias tor='cd ~/Downloads/tor-browser_en-US && ./start-tor-browser.desktop'
 alias pls='python ~/github/LearningPython/Code/RandomStuff/pls.py'
 
 #== Functions ==#
