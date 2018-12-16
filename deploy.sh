@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "
 ==================================
 Creating Testing and github folder
@@ -37,3 +39,5 @@ Adding aliases
 ==============
 "
 wget -O - https://pastebin.com/raw/MGnjz0sy >> ~/.bashrc && . ~/.bashrc
+echo done
+echo Dont forget to append xfiles to bashrc! (https://pastebin.com/raw/h1SPeRCr)
