@@ -102,7 +102,6 @@ alias python='python3'
 alias ptpython='python3 -m ptpython'
 alias mapit='python3 ~/github/LearningPython/Code/CodesFromBooks/Web/mapIt.py' 
 alias pls='python ~/github/LearningPython/Code/RandomStuff/pls.py'
-alias ts='cd /media/D/Programs/TeamSpeak3-Client-linux_amd64/ && ./ts3client_runscript.sh'
 
 #== Functions ==#
 function x-files {
