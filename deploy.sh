@@ -38,6 +38,6 @@ echo "
 Adding aliases
 ==============
 "
-wget -O - https://pastebin.com/raw/MGnjz0sy >> ~/.bashrc && . ~/.bashrc
+wget -O - https://pastebin.com/raw/tjH1gndT >> ~/.bashrc && . ~/.bashrc
 echo done
 echo Dont forget to append xfiles to bashrc! (https://pastebin.com/raw/h1SPeRCr)
