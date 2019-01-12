@@ -1,42 +1,49 @@
 #!/usr/bin/env bash
 
 echo "
-==================================
-Creating Testing and github folder
-==================================
+==========================
+||Creating Github folder||
+==========================
 "
-mkdir /home/$USER/Testing /home/$USER/github
-
+mkdir /home/$USER/github
 echo done
+
 echo "
-=============
-Cloning repos
-=============
+==========================
+||    Cloning repos     ||
+==========================
 "
+clone="git clone https://github.com/kelj0/"
 cd /home/$USER/github
-git clone https://github.com/kelj0/LearningPython.git \
-&& git clone https://github.com/kelj0/Linux.git \
-&& git clone https://github.com/kelj0/dotfiles.git \
-&& git clone https://github.com/kelj0/Web-Dev.git \
-&& git clone https://github.com/kelj0/Brainfuck-interpreter.git
-
+$clone"LearningPython.git" \
+&& $clone"Linux.git" \
+&& $clone"dotfiles.git" \
+&& $clone"Web-Dev.git" \
+&& $clone"Brainfuck-interpreter.git"
+&& $clone"Learning-C.git" \
+&& $clone"TestingArea.git"
 echo done
 
-cd ../Testing
-
 echo "
-=============================================
-Creating python cpp shell and web-dev folders
-=============================================
+==========================
+|| Cloning TestingArea  ||
+==========================
 "
+cd ../ && $clone"TestingArea.git"
+echo done
 
-mkdir python CPP Shell Web-dev
+echo "TestingArea -> Testing"
+mv TestingArea Testing
+echo done
+
+echo "rm .git from Testing"
+sudo rm -rf /home/$USER/Testing/.git
 echo done
 
 echo "
-==============
-Adding aliases
-==============
+==========================
+||    Adding aliases    ||
+==========================
 "
 wget -O - https://pastebin.com/raw/tjH1gndT >> ~/.bashrc && . ~/.bashrc
 echo done
