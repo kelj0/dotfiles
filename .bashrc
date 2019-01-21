@@ -96,12 +96,13 @@ alias l='ls -CF'
 alias gaa='git add --all'
 alias gca='git commit'
 alias gst='git status'
-alias gps='git push && x-files'
+alias gps='git push'
+alias xgps='git push && x-files'
 
 alias python='python3'
 alias ptpython='python3 -m ptpython'
-alias mapit='python3 ~/github/LearningPython/Code/CodesFromBooks/Web/mapIt.py' 
-alias pls='python ~/github/LearningPython/Code/RandomStuff/pls.py'
+alias mapit='python3 ~/github/LearningPython/CodesFromBooks/Web/mapIt.py' 
+alias pls='python ~/github/LearningPython/RandomStuff/pls.py'
 
 #== Functions ==#
 function x-files {
@@ -130,3 +131,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
