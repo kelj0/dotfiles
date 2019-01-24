@@ -19,7 +19,7 @@ $clone"LearningPython.git" \
 && $clone"Linux.git" \
 && $clone"dotfiles.git" \
 && $clone"Web-Dev.git" \
-&& $clone"Brainfuck-interpreter.git"
+&& $clone"Brainfuck-interpreter.git"\
 && $clone"Learning-C.git" \
 && $clone"TestingArea.git"
 echo done
@@ -47,4 +47,4 @@ echo "
 "
 wget -O - https://pastebin.com/raw/tjH1gndT >> ~/.bashrc && . ~/.bashrc
 echo done
-echo Dont forget to append xfiles to bashrc! (https://pastebin.com/raw/h1SPeRCr)
+echo "Dont forget to append xfiles to bashrc! (https://pastebin.com/raw/h1SPeRCr)"
