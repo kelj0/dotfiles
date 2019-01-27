@@ -45,6 +45,3 @@ When you want to use it again
 * `sudo nano /etc/crypttab` - and add this line `NAME /dev/disk/by-uuid/UUID_from_step_before none luks`
 * `sudo mkdir /mnt/encrypted_disk` - create mount point 
 * `sudo nano /etc/fstab` - add this mnt point `/dev/mapper/NAME /mnt/encrypted_disk ext4 defaults 0 2`
-
-
-* 
