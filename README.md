@@ -25,7 +25,7 @@ Append this https://pastebin.com/raw/h1SPeRCr to ~/.bashrc to make git push xfil
 * `sudo mkdir /mnt/encrypted` - create folder to mount it on (/mnt is commont place to mount)
 * `sudo mount /dev/mapper/sdb1 /mnt/encrypted` - mount it  
 * `sudo touch /mnt/encrypted/test.txt` - create test file (you need root permision on encrypted partition)
-* `sudo chown -R `whoami`:users /mnt/encrypted` -you can change that permision with this command
+* ``sudo chown -R `whoami`:users /mnt/encrypted`` -you can change that permision with this command
 * `touch /mnt/encrypted/test.txt` - test it to see if you can create file without root
 
 When you are done working on encrypted disk
