@@ -45,3 +45,26 @@ When you want to use it again
 * `sudo nano /etc/crypttab` - and add this line `NAME /dev/disk/by-uuid/UUID_from_step_before none luks`
 * `sudo mkdir /mnt/encrypted_disk` - create mount point 
 * `sudo nano /etc/fstab` - add this mnt point `/dev/mapper/NAME /mnt/encrypted_disk ext4 defaults 0 2`
+
+
+
+### Configuring nano
+
+To configure global settings -> `sudo nano /etc/nanorc`
+
+Optionally configure nano on a user by user basis by creating a .nanorc file in their home directory
+
+```
+So just uncomment/add this lines to alter its behaviour, il write few of them that i personally 
+have but rest is on you..you are the one that will use this so make it for you :)
+```
+* Enable mouse support -> `set mouse`
+* Convert typed tabs to spaces -> `set tabstospaces`
+* Set tab size to 4 -> `set tabsize 4`
+* Text highlighting -> `include /usr/share/nano/*.nanorc` (if you want specific language here is [list](https://pastebin.com/eNBBkKuZ))
+* Binding keys '^'==CTRL and 'M'==ALT below are 2 examples
+
+```
+bind M-5 copytext all # alt+5 as copy
+bind M-2 uncut all    # alt+2 as paste
+```
