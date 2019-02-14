@@ -43,7 +43,7 @@ cp -r /home/$USER/github/TestingArea ../
 echo done
 
 echo "TestingArea -> Testing"
-mv TestingArea Testing
+mv ~/TestingArea ~/Testing
 echo done
 
 echo "rm .git from Testing"
@@ -57,9 +57,6 @@ echo "==========================
 
 sudo cp /home/$USER/github/dotfiles/.bashrc ~/
 echo done
-
-
-
 
 echo "
 ==========================

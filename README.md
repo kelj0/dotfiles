@@ -3,14 +3,7 @@ Personal config files
 
 `. deploy.sh`
 
-Adds aliases, clones my important repos, and adds testing environment
-
-
-**Important**
-
-```
-Append this https://pastebin.com/raw/h1SPeRCr to ~/.bashrc to make git push xfiles sound working
-```
+Adds aliases, clones my important repos, adds testing environment, add nvim config
 
 
 ### Encrypt storage in Linux
