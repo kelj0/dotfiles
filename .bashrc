@@ -101,7 +101,6 @@ alias xgps='git push && x-files'
 
 alias python='python3'
 alias ptpython='python3 -m ptpython'
-alias mapit='python3 ~/github/LearningPython/CodesFromBooks/Web/mapIt.py' 
 alias pls='python ~/github/LearningPython/RandomStuff/pls.py'
 
 #== Functions ==#
