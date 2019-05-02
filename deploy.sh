@@ -34,7 +34,8 @@ $clone"LearningPython.git" \
 && $clone"TestingArea.git"
 echo done
 
-echo "==========================
+echo "
+==========================
 ||    cp TestingArea    ||
 ==========================
 "
@@ -50,7 +51,8 @@ echo "rm .git from Testing"
 sudo rm -rf /home/$USER/Testing/.git
 echo done
 
-echo "==========================
+echo "
+==========================
 ||     Adding bashrc    ||
 ==========================
 "
@@ -60,10 +62,13 @@ echo done
 
 echo "
 ==========================
-||     neovim stuff     ||
+||    (neo)vim stuff    ||
 ==========================
 "
+echo "apt get vim"
+sudo apt-get install vim -y
 cd ~
+cp /home/$USER/github/dotfiles/.vimrc ~
 echo "download and install appimage"
 wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document nvim # download and install appimage
 echo "make nvim accessible to all users"
@@ -74,10 +79,13 @@ sudo mv nvim /usr/bin # move bin file
 mkdir -p ~/.config/nvim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim # vim plugin manager
 echo "copy configs"
-sudo cp  /home/$USER/github/dotfiles/nvim/init.vim ~/.config/nvim # copy configs
+sudo cp  /home/$USER/github/dotfiles/init.vim ~/.config/nvim # copy configs
 echo "pip install neovim"
 pip3 install --user neovim
 pip install --user neovim
+echo done
 
+echo "mv tmux config"
+cp /home/$USER/github/dotfiles/.tmux.conf ~
 echo done
 
