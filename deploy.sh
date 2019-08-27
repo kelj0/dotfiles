@@ -81,10 +81,13 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 echo "copy configs"
 sudo cp  /home/$USER/github/dotfiles/init.vim ~/.config/nvim # copy configs
 echo "pip install neovim"
+sudo apt install python-pip
+sudo apt install python3-pip
 pip3 install --user neovim
 pip install --user neovim
 echo done
 
+sudo apt install tmux
 echo "mv tmux config"
 cp /home/$USER/github/dotfiles/.tmux.conf ~
 echo done
