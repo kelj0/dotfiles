@@ -10,6 +10,8 @@ echo "Running kelj0 deploy script
 -------------------------------------
 "
 
+sudo apt install git synaptic apt-xapian-index policykit-1-gnome curl wget
+
 echo "==========================
 ||Creating Github folder||
 ==========================
@@ -50,6 +52,19 @@ echo done
 echo "rm .git from Testing"
 sudo rm -rf /home/$USER/Testing/.git
 echo done
+
+echo "
+==========================
+||   Installing vscode  ||
+==========================
+"
+cd ~/Downloads
+wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
+sudo dpkg -i vscode.deb
+rm vscode.deb
+echo Installing pip,tmux...
+sudo apt install mc w3m links python-pip python3-pip
+sudo done
 
 echo "
 ==========================
