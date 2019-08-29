@@ -121,5 +121,25 @@ sudo mv Matcha* /usr/share/themes
 wget https://snwh.org/paper/download.php?owner=snwh&ppa=ppa&pkg=paper-icon-theme,18.04
 sudo dpkg -i paper*
 sudo apt install -f
-echo "Now go to settings->appearance choose Matcha-dark-cold and Paper icons"
+echo Sleeping for 5s so you can read next line
+echo "To change theme go to settings->appearance choose Matcha-dark-cold and Paper icons"
+sleep 5
+
+echo "
+=================
+||   fluxgui   ||
+=================
+"
+sudo apt install python3-distutils gir1.2-appindicator3-0.1 gir1.2-gtk-3.0
+cd ~/Downloads
+git clone "https://github.com/xflux-gui/fluxgui.git"
+cd fluxgui
+./download-xflux.py
+echo "Install system wide?(y/n) [else will install in home directory]"
+read t
+if [[ $t == "y" || $t == "Y" ]]; then
+    sudo ./setup.py install --record installed.txt
+else
+    ./setup.py install --record installed.txt
+fi
 
