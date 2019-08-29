@@ -1,7 +1,3 @@
-let g:jedi#popup_select_first = 0
-
-Plugin 'davidhalter/jedi-vim'
-
 " Spaces and Tabs
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
