@@ -9,8 +9,8 @@ echo "Running kelj0 deploy script
 | xxxx  x x  x  x xxx xxx x_x  xxxx |
 -------------------------------------
 "
-
-sudo apt install git synaptic apt-xapian-index policykit-1-gnome curl wget
+sudo apt update && sudo apt upgrade
+sudo apt install git synaptic apt-xapian-index policykit-1-gnome curl wget redshift
 
 echo "==========================
 ||Creating Github folder||
@@ -143,3 +143,4 @@ else
     ./setup.py install --record installed.txt
 fi
 
+sudo apt update && sudo apt upgrade
