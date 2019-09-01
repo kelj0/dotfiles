@@ -10,7 +10,7 @@ echo "Running kelj0 deploy script
 -------------------------------------
 "
 sudo apt update && sudo apt upgrade
-sudo apt install git synaptic apt-xapian-index policykit-1-gnome curl wget redshift
+sudo apt install synaptic apt-xapian-index policykit-1-gnome curl wget redshift -y
 
 echo "==========================
 ||Creating Github folder||
@@ -63,7 +63,7 @@ wget -O vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868
 sudo dpkg -i vscode.deb
 rm vscode.deb
 echo Installing pip,tmux...
-sudo apt install mc w3m links python-pip python3-pip
+sudo apt install mc w3m links python-pip python3-pip -y
 echo done
 
 echo "
@@ -102,7 +102,7 @@ pip3 install --user neovim
 pip install --user neovim
 echo done
 
-sudo apt install tmux
+sudo apt install tmux -y
 echo "mv tmux config"
 cp /home/$USER/github/dotfiles/.tmux.conf ~
 echo done
@@ -115,32 +115,35 @@ echo "
 "
 sudo apt install gtk2-engines-murrine gtk2-engines-pixbuf
 cd ~/Downloads
-wget https://dl.opendesktop.org/api/files/download/id/1567080506/s/10a68537fefae3155432a1c917ecee871e69038d894ca0e6a90d9cc65acdd3cd0bb17552446f019d1c9a842686d8a745547c3ec5243952dfd9b729d3c5b45051/t/1567120967/c/af1bddb29db76a9b75644b4f3efe58c84263f4f25e6fadc60c8187a84d3b396451a801fa7220b72eff2adb8a57dbd435055e922b89d7c80c478d6868dfcf243e/lt/download/Matcha-dark-cold.tar.gz
-tar -xvfz Matcha*.gz
-sudo mv Matcha* /usr/share/themes
-wget https://snwh.org/paper/download.php?owner=snwh&ppa=ppa&pkg=paper-icon-theme,18.04
-sudo dpkg -i paper*
+sudo tar -xvfz /home/$USER/github/dotfiles/Matcha*.gz -C /usr/share/themes
+wget 'https://snwh.org/paper/download.php?owner=snwh&ppa=ppa&pkg=paper-icon-theme,18.04' -O paper.deb
+sudo dpkg -i paper.deb
 sudo apt install -f
 echo Sleeping for 5s so you can read next line
 echo "To change theme go to settings->appearance choose Matcha-dark-cold and Paper icons"
 sleep 5
 
 echo "
-=================
-||   fluxgui   ||
-=================
+===================
+||    Discord    ||
+===================
 "
-sudo apt install python3-distutils gir1.2-appindicator3-0.1 gir1.2-gtk-3.0
-cd ~/Downloads
-git clone "https://github.com/xflux-gui/fluxgui.git"
-cd fluxgui
-./download-xflux.py
-echo "Install system wide?(y/n) [else will install in home directory]"
-read t
-if [[ $t == "y" || $t == "Y" ]]; then
-    sudo ./setup.py install --record installed.txt
-else
-    ./setup.py install --record installed.txt
-fi
+wget 'https://discordapp.com/api/download?platform=linux&format=deb' -O disc.deb
+sudo dpkg -i disc.deb
+
+echo "
+==================
+||  VirtualBox  ||
+==================
+"
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+echo "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" | sudo tee -a /etc/apt/sources.list 
+sudo apt update
+sudo apt install virtualbox-6.0
 
 sudo apt update && sudo apt upgrade
+sudo apt --fix-broken install
+rm ~/Downloads/*
+rm -rf ~/dotfiles
+
