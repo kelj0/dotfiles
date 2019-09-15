@@ -102,7 +102,7 @@ alias xgps='git push && x-files'
 alias python='python3'
 alias ptpython='python3 -m ptpython'
 alias pls='python ~/github/LearningPython/RandomStuff/pls.py'
-alias startrs="redshift -vt 4500:2800 &"
+alias startrs="redshift -vt 6500:3200 &"
 #== Functions ==#
 function stoprs { kill `ps aux | grep redshift | head -n 1 | awk '{print $2}'`; }
 function x-files {
