@@ -1,8 +1,7 @@
-call plug#begin()
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'honza/vim-snippets'
 Plug 'brooth/far.vim'
-Plug 'zchee/deoplete-jedi'
 
 " NCM2 (formerly nvim-completion-manager)
 " assuming you're using vim-plug: https://github.com/junegunn/vim-plug
@@ -37,8 +36,11 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-let g:deoplete#enable_at_startup = 1
+Plug 'zchee/deoplete-jedi'
+
 call plug#end()
+let g:deoplete#enable_at_startup = 1
+
 
 " Spaces and Tabs
 set tabstop=4       " number of visual spaces per TAB

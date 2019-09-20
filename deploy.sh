@@ -100,6 +100,7 @@ sudo apt install python-pip
 sudo apt install python3-pip
 pip3 install --user neovim
 pip install --user neovim
+nvim -E -c PlugInstall -c q
 echo done
 
 sudo apt install tmux -y
