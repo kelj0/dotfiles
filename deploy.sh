@@ -132,8 +132,22 @@ echo "
 wget 'https://discordapp.com/api/download?platform=linux&format=deb' -O disc.deb
 sudo dpkg -i disc.deb
 
+echo "
+==================
+||  VirtualBox  ||
+==================
+"
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+echo "deb http://download.virtualbox.org/virtualbox/debian bionic contrib" | sudo tee -a /etc/apt/sources.list 
+sudo apt update
+sudo apt install virtualbox-6.0
+
 sudo apt update && sudo apt upgrade
 sudo apt --fix-broken install
 rm ~/Downloads/*
 rm -rf ~/dotfiles
+
+
+
 
