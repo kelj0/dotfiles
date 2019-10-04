@@ -6,7 +6,9 @@ set expandtab       " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
 """"""""""
-
+" Syntax coloring
+syntax on
+highlight Comment ctermfg=green
 " Hybrid line numbers
 set number relativenumber
 set nu rnu
