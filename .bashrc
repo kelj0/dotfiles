@@ -116,7 +116,7 @@ function x-files {
 
 function listening() { lsof -n -iTCP:$1 | grep LISTEN; }
 
-function openports() { ss -tulpn | grep LISTEN | awk '{{for(i=5;i<=NF;++i) printf "%s ", $i} print "" }'; }
+function openedports() { ss -tulpn | grep LISTEN | awk '{{for(i=5;i<=NF;++i) printf "%s ", $i} print "" }'; }
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
