@@ -102,6 +102,10 @@ alias xgps='git push && x-files'
 alias python='python3'
 alias ptpython='python3 -m ptpython'
 alias pls='python ~/github/LearningPython/RandomStuff/pls.py'
+
+alias tmuj='tmux attach -t '
+alias tmul='tmux list-sessions'
+
 #== Functions ==#
 function startrs { (redshift -t 6500:3200)&> /dev/null & }
 function stoprs { kill `ps aux | grep redshift | head -n 1 | awk '{print $2}'`; }
