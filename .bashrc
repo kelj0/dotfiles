@@ -105,10 +105,10 @@ alias pls='python ~/github/LearningPython/RandomStuff/pls.py'
 
 alias tmuj='tmux attach -t '
 alias tmul='tmux list-sessions'
-alias smol='python3 -c "$(curl -s https://pastebin.com/raw/A3RFarFd)"'
+alias smol='python3 -c "$(curl -s https://pastebin.com/raw/ZmYt5C1L)"'
 
 #== Functions ==#
-function startrs { (redshift -t 6500:3200)&> /dev/null & }
+function startrs { (redshift -l 68.5:7.4 -t 3200:3200)&> /dev/null & }
 function stoprs { kill `ps aux | grep redshift | head -n 1 | awk '{print $2}'`; }
 function git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
