@@ -28,29 +28,7 @@ echo "==========================
 clone="git clone https://github.com/kelj0/"
 cd /home/$USER/github
 $clone"LearningPython.git" \
-&& $clone"Linux.git" \
 && $clone"dotfiles.git" \
-&& $clone"Web-Dev.git" \
-&& $clone"Brainfuck-interpreter.git"\
-&& $clone"Learning-C.git" \
-&& $clone"TestingArea.git"
-echo done
-
-echo "
-==========================
-||    cp TestingArea    ||
-==========================
-"
-
-cp -r /home/$USER/github/TestingArea ../
-echo done
-
-echo "TestingArea -> Testing"
-mv ~/TestingArea ~/Testing
-echo done
-
-echo "rm .git from Testing"
-sudo rm -rf /home/$USER/Testing/.git
 echo done
 
 echo "
