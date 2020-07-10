@@ -121,7 +121,9 @@ function x-files {
 
 function what() { sudo lsof -i :$1; }
 
-function holes() { sudo lsof -i | grep -E "LISTEN|COMMAND"; }
+function holes() { sudo lsof -P -i | grep -E "LISTEN|COMMAND"; }
+
+function papi() { echo 'papi nije moga izac jer s vama dila legalne droge eno ga tamo nosi masku'; echo 'https://youtu.be/gl4tuSTMhAg?t=12'; }
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
