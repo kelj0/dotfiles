@@ -10,7 +10,7 @@ echo "Running kelj0 deploy script
 -------------------------------------
 "
 sudo apt update && sudo apt upgrade
-sudo apt install synaptic apt-xapian-index policykit-1-gnome curl wget redshift -y
+sudo apt install synaptic apt-xapian-index policykit-1-gnome curl wget redshift vim vim-gtk libclang1 -y
 
 echo "==========================
 ||Creating Github folder||
@@ -58,10 +58,9 @@ echo "
 ||    (neo)vim stuff    ||
 ==========================
 "
-echo "apt get vim"
-sudo apt-get install vim -y
 cd ~
 cp /home/$USER/github/dotfiles/.vimrc ~
+sudo ln -s /usr/lib/x86_64-linux-gnu/libclang07.so.1 libclang.so
 echo "download and install appimage"
 wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document nvim # download and install appimage
 echo "make nvim accessible to all users"
@@ -125,7 +124,4 @@ sudo apt update && sudo apt upgrade
 sudo apt --fix-broken install
 rm ~/Downloads/*
 rm -rf ~/dotfiles
-
-
-
 
