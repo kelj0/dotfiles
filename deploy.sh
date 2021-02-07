@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 echo "Running kelj0 deploy script
 -------------------------------------
 | xxxx       x  x xxx x     x  xxxx |
@@ -71,7 +70,7 @@ sudo mv nvim /usr/bin # move bin file
 mkdir -p ~/.config/nvim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim # vim plugin manager
 echo "copy configs"
-sudo cp  /home/$USER/github/dotfiles/init.vim ~/.config/nvim # copy configs
+sudo cp  /home/$USER/github/dotfiles/init.vim ~/.config/nvim/init.vim # copy configs
 echo "pip install neovim"
 sudo apt install python-pip
 sudo apt install python3-pip
