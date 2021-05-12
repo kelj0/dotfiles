@@ -125,6 +125,8 @@ function holes() { sudo lsof -P -i | grep -E "LISTEN|COMMAND"; }
 
 function papi() { echo 'papi nije moga izac jer s vama dila legalne droge eno ga tamo nosi masku'; echo 'https://youtu.be/gl4tuSTMhAg?t=12'; }
 
+function gtfo() { for x in `ps aux | grep $1 | awk '{print $2}'`; do sudo kill -9 $x; done }
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
