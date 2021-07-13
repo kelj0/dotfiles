@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(git_branch)\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(git_branch)\n\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\n\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -125,7 +125,7 @@ function holes() { sudo lsof -P -i | grep -E "LISTEN|COMMAND"; }
 
 function papi() { echo 'papi nije moga izac jer s vama dila legalne droge eno ga tamo nosi masku'; echo 'https://youtu.be/gl4tuSTMhAg?t=12'; }
 
-function gtfo() { for x in `ps aux | grep $1 | awk '{print $2}'`; do sudo kill -9 $x; done }
+function gtfo() { for x in `ps aux | grep -i $1 | awk '{print $2}'`; do sudo kill -9 $x; done }
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
